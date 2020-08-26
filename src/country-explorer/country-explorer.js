@@ -2,7 +2,6 @@ import { CountriesApi } from '../apis/countries-api';
 
 export class CountryExplorer {
     static inject = [CountriesApi];
-    message = 'I work'
 
     constructor(api) {
         this.api = api;
@@ -10,6 +9,6 @@ export class CountryExplorer {
 
     async bind() {
         this.allCountries = await this.api.getAllCountries();
-        console.log(this.allCountries);
+        this.allRegions = Array.from(new Set(this.allCountries.map(country => country.region)));
     }
 }
