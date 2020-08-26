@@ -1,3 +1,4 @@
 <template>
-    ${message}
+    <require from="./country-card/country-card"></require>
+    <country-card repeat.for="country of allCountries" image-url.bind="country.flag"></country-card>
 </template>

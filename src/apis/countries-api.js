@@ -10,7 +10,6 @@ export class CountriesApi {
 
     async getAllCountries() {
          let response = await this.httpClient.fetch('https://restcountries.eu/rest/v2/all');
-         console.log(response);
-         return response.json();
+         return await response.json();
     }
 }
