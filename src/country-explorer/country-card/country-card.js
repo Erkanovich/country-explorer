@@ -3,5 +3,6 @@ import { bindable } from 'aurelia-framework';
 export class CountryCard {
 
     @bindable imageUrl;
-    message = "I'm a card";
+    @bindable name = 'Country name not available';
+    @bindable nativeName = 'Native name not available';
 }

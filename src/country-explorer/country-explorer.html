@@ -1,4 +1,9 @@
 <template>
     <require from="./country-card/country-card"></require>
-    <country-card repeat.for="country of allCountries" image-url.bind="country.flag"></country-card>
+    <country-card 
+        repeat.for="country of allCountries" 
+        image-url.bind="country.flag"
+        name.bind="country.name"
+        native-name.bind="country.nativeName">
+    </country-card>
 </template>
