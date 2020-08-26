@@ -9,7 +9,7 @@ export class CountriesApi {
     }
 
     async getAllCountries() {
-         let response = await this.httpClient.fetch('https://restcountries.eu/rest/v2/all');
+         let response = await this.httpClient.fetch('https://restcountries.eu/rest/v2/all?fields=name;nativeName;capital;region;population;flag');
          return await response.json();
     }
 }
