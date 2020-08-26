@@ -1,3 +1,6 @@
 <template>
-
+    <select class="form-control" value.bind="selectedRegion">
+        <option value="">Select region</option>
+        <option repeat.for="region of regions" value.bind="region">${region}</option>
+    </select>
 </template>

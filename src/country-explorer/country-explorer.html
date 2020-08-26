@@ -1,7 +1,11 @@
 <template>
     <require from="./country-card/country-card"></require>
+    <require from="./region-filter/region-filter"></require>
+    <div class="col-lg-12 row" style="margin-bottom:10px">
+        <region-filter regions.bind="allRegions" selected-region.two-way="selectedRegion"></region-filter>
+    </div>
     <country-card 
-        repeat.for="country of allCountries" 
+        repeat.for="country of filteredCountries" 
         image-url.bind="country.flag"
         name.bind="country.name"
         native-name.bind="country.nativeName"
